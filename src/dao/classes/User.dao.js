@@ -1,20 +1,28 @@
-import userModel from "../models/User.js";
+import userModel from "../User.js";
+
 
 export default class Users {
-
-    getUserById = (id) =>{
-        return userModel.findById(id);
+    
+    get = (params) =>{
+        return userModel.find(params);
     }
 
-    saveNewUser = (data) =>{
-        return userModel.create(data);
+    getBy = (params) =>{
+        return userModel.findOne(params);
     }
 
-    updateUser = (id,data) =>{
-        return userModel.findByIdAndUpdate(id,{$set:data})
+    save = (doc) =>{
+        return userModel.create(doc);
     }
 
-    deleteUser = (id) =>{
-        return userModel.deleteOne({_id: id});
+    update = (id,doc) =>{
+        return userModel.findByIdAndUpdate(id,{$set:doc})
     }
-}
+
+    delete = (id) =>{
+        return userModel.findByIdAndDelete(id);
+    }
+    insertMany = (docs) => {
+        return userModel.insertMany(docs);
+      }
+    }
