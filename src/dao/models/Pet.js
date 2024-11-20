@@ -11,10 +11,7 @@ const schema = new mongoose.Schema({
         type:String,
         required:true
     },
-    birthDate: {
-        type:String,
-        required:true
-    },
+    birthDate:Date,
     adopted:{
         type:Boolean,
         default:false
