@@ -52,4 +52,4 @@ Query Parameters (opcional):
 Users: Número de usuarios a generar (predeterminado: 50).
 Pets: Número de mascotas a generar (predeterminado: 50).
 
-![POST generateData](src/public/img/image3.png)
+![POST generateData](src/public/img/postman3.png)
